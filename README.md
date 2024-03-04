@@ -23,3 +23,11 @@ future (version 1.33.0)
 clusterProfiler (version 3.12.0)　
 org.Mm.eg.db (version 3.8.2)
 biomaRt (version 2.40.5)
+
+bcl2fastq (version 2.20.0.422) 
+CellRanger (version 6.0.2)
+R (version 4.1.0) 
+Seurat (version 4.0.3)
+DropletUtils (version 1.18.1)
+DoubletFinder (version 2.0.3) 
+
