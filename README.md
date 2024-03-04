@@ -8,10 +8,22 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 # Downloading the data
 The raw data for single-cell RNA-seq has been deposited in GSA under CRA006610. The processed data for single-cell RNA-seq has been deposited in OMIX under OMIX001083. 
 # Requirements
-Cell Ranger (version 6.0.2)　　
+1. Cellranger_pipeline
+Cell Ranger (version 6.0.2)
+2. Data_processing
 R (version 4.1.0)
 Seurat (version 4.0.3)　
 DropletUtils (version 1.18.1)　　
-DoubletFinder (version 2.0.3)　　
-clustertree (version 0.5.0)　
+DoubletFinder (version 2.0.3)
+ggsci (version 2.9)
+RColorBrewer (version 1.1-3)
+ggplot2 (version 3.4.2)
+dplyr (version 1.0.8)
+BiocParallel (version 1.28.3)
+clustertree (version 0.5.0)
+future (version 1.33.0)
+3. DEG_definition
+
 clusterProfiler (version 3.12.0)　
+org.Mm.eg.db (version 3.8.2)
+biomaRt (version 2.40.5)
