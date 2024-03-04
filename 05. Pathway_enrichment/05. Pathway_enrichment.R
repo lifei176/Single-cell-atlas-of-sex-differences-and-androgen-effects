@@ -247,7 +247,7 @@ deg_go_data$comparison<-c(rep("MSvsFS",(nrow(deg_MSVSFS_up_go_data)+nrow(deg_MSV
                           rep("FDvsFS",(nrow(deg_FDVSFS_up_go_data)+nrow(deg_FDVSFS_down_go_data)))
 )
 deg_go_data_final<-deg_go_data[which(deg_go_data$qvalue<0.01),]
-write.csv(deg_go_data_final,"/.../Pathway_DEG_final.csv")
+write.csv(deg_go_data_final,"/.../Pathway_DEG_data.csv")
 
 ################### 3. Perform pathway enrichment based on the AASB-DEGs in each cell type
 ###################
@@ -326,4 +326,4 @@ for (i in 1:length(cell_negative)){
 Pathway_AASB_DEG<-rbind(pathway_positive_go_data_all,pathway_negative_go_data_all)
 ################### 3.3 Define the final pathway with the cutoff set to qvalue<0.01
 Pathway_AASB_DEG_final<-Pathway_AASB_DEG[which(Pathway_AASB_DEG$qvalue<0.01),]
-write.csv(Pathway_AASB_DEG_final,"/.../Pathway_AASB_DEG_final.csv")
+write.csv(Pathway_AASB_DEG_final,"/.../Pathway_AASB_DEG_data.csv")
