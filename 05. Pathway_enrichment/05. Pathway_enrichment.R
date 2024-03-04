@@ -4,8 +4,6 @@
 ###################
 ###################
 ###################
-library(DOSE)
-library(enrichplot)
 library(clusterProfiler)
 library(org.Mm.eg.db)
 library(biomaRt)
