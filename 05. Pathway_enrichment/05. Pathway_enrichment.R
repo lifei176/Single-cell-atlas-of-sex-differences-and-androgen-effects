@@ -10,7 +10,7 @@ library(clusterProfiler)
 library(org.Mm.eg.db)
 library(biomaRt)
 
-deg<-read.csv(".../DEG_filter.csv")
+deg<-read.csv("/.../DEG_filter.csv")
 deg$tissue_cell_type<-paste0(deg$Tissue,"_",deg$Cell_type,sep="")
 deg_MSVSFS<-deg[which(deg$Comparison=="MSvsFS"),]
 deg_MCVSMS<-deg[which(deg$Comparison=="MCvsMS"),]
@@ -56,7 +56,7 @@ for (i in 1:length(cell_MSVSFS_up)){
 }
 length(table(deg_MSVSFS_up_go_data$tissue_cell_type))
 dim(deg_MSVSFS_up_go_data)
-write.csv(deg_MSVSFS_up_go_data,"deg_MSVSFS_up_go_data.csv")
+write.csv(deg_MSVSFS_up_go_data,"/.../Deg_MSVSFS_up_go_data.csv")
 
 ################### 2.2. MSVSFS_down
 deg_MSVSFS_down<-deg_MSVSFS[which(deg_MSVSFS$Change=="Down"),]
@@ -91,7 +91,7 @@ for (i in 1:length(cell_MSVSFS_down)){
 }
 length(table(deg_MSVSFS_down_go_data$tissue_cell_type))
 dim(deg_MSVSFS_down_go_data)
-write.csv(deg_MSVSFS_down_go_data,".../deg_MSVSFS_down_go_data.csv")
+write.csv(deg_MSVSFS_down_go_data,"/.../Deg_MSVSFS_down_go_data.csv")
 
 ################### 2.3. MCVSMS_up
 deg_MCVSMS_up<-deg_MCVSMS[which(deg_MCVSMS$Change=="Up"),]
@@ -126,7 +126,7 @@ for (i in 1:length(cell_MCVSMS_up)){
 }
 length(table(deg_MCVSMS_up_go_data$tissue_cell_type))
 dim(deg_MCVSMS_up_go_data)
-write.csv(deg_MCVSMS_up_go_data,".../deg_MCVSMS_up_go_data.csv")
+write.csv(deg_MCVSMS_up_go_data,"/.../Deg_MCVSMS_up_go_data.csv")
 
 ################### 2.4. MCVSMS_down
 deg_MCVSMS_down<-deg_MCVSMS[which(deg_MCVSMS$Change=="Down"),]
@@ -161,7 +161,7 @@ for (i in 1:length(cell_MCVSMS_down)){
 }
 length(table(deg_MCVSMS_down_go_data$tissue_cell_type))
 dim(deg_MCVSMS_down_go_data)
-write.csv(deg_MCVSMS_down_go_data,".../deg_MCVSMS_down_go_data.csv")
+write.csv(deg_MCVSMS_down_go_data,"/.../Deg_MCVSMS_down_go_data.csv")
 
 ################### 2.5. FDVSFS_up
 deg_FDVSFS_up<-deg_FDVSFS[which(deg_FDVSFS$Change=="Up"),]
@@ -195,7 +195,7 @@ for (i in 1:length(cell_FDVSFS_up)){
 }
 length(table(deg_FDVSFS_up_go_data$tissue_cell_type))
 dim(deg_FDVSFS_up_go_data)
-write.csv(deg_FDVSFS_up_go_data,".../deg_FDVSFS_up_go_data.csv")
+write.csv(deg_FDVSFS_up_go_data,"/.../Deg_FDVSFS_up_go_data.csv")
 
 ################### 2.6. FDVSFS_down
 deg_FDVSFS_down<-deg_FDVSFS[which(deg_FDVSFS$Change=="Down"),]
@@ -230,25 +230,24 @@ for (i in 1:length(cell_FDVSFS_down)){
 }
 length(table(deg_FDVSFS_down_go_data$tissue_cell_type))
 dim(deg_FDVSFS_down_go_data)
-write.csv(deg_FDVSFS_down_go_data,".../deg_FDVSFS_down_go_data.csv")
+write.csv(deg_FDVSFS_down_go_data,"/.../Deg_FDVSFS_down_go_data.csv")
 
 
-deg_MSVSFS_up_go_data<-read.csv(".../deg_MSVSFS_up_go_data.csv")
-deg_MSVSFS_down_go_data<-read.csv(".../deg_MSVSFS_down_go_data.csv")
-deg_MCVSMS_up_go_data<-read.csv(".../deg_MCVSMS_up_go_data.csv")
-deg_MCVSMS_down_go_data<-read.csv(".../deg_MCVSMS_down_go_data.csv")
-deg_FDVSFS_up_go_data<-read.csv(".../deg_FDVSFS_up_go_data.csv")
-deg_FDVSFS_down_go_data<-read.csv(".../deg_FDVSFS_down_go_data.csv")
+deg_MSVSFS_up_go_data<-read.csv("/.../Deg_MSVSFS_up_go_data.csv")
+deg_MSVSFS_down_go_data<-read.csv("/.../Deg_MSVSFS_down_go_data.csv")
+deg_MCVSMS_up_go_data<-read.csv("/.../Deg_MCVSMS_up_go_data.csv")
+deg_MCVSMS_down_go_data<-read.csv("/.../Deg_MCVSMS_down_go_data.csv")
+deg_FDVSFS_up_go_data<-read.csv("/.../Deg_FDVSFS_up_go_data.csv")
+deg_FDVSFS_down_go_data<-read.csv("/.../Deg_FDVSFS_down_go_data.csv")
 
+################### 2.7 Merge all the results together to generate the final pathway with the cutoff set to qvalue<0.01
 deg_go_data<-rbind(deg_MSVSFS_up_go_data,deg_MSVSFS_down_go_data,deg_MCVSMS_up_go_data,deg_MCVSMS_down_go_data,deg_FDVSFS_up_go_data,deg_FDVSFS_down_go_data)
 deg_go_data$comparison<-c(rep("MSvsFS",(nrow(deg_MSVSFS_up_go_data)+nrow(deg_MSVSFS_down_go_data))),
                           rep("MCvsMS",(nrow(deg_MCVSMS_up_go_data)+nrow(deg_MCVSMS_down_go_data))),
                           rep("FDvsFS",(nrow(deg_FDVSFS_up_go_data)+nrow(deg_FDVSFS_down_go_data)))
 )
-
-write.csv(deg_go_data,".../deg_go_data.csv")
 deg_go_data_final<-deg_go_data[which(deg_go_data$qvalue<0.01),]
-write.csv(deg_go_data_final,"/.../deg_go_data_final.csv")
+write.csv(deg_go_data_final,"/.../Pathway_DEG_final.csv")
 
 ################### 3. Perform pathway enrichment based on the AASB-DEGs in each cell type
 ###################
@@ -257,7 +256,7 @@ write.csv(deg_go_data_final,"/.../deg_go_data_final.csv")
 ###################
 ###################
 ###################
-AASB_DEG<-read.csv(".../AASB_DEG.csv")
+AASB_DEG<-read.csv("/.../AASB_DEG.csv")
 ################### 3.1. Positive AASB-DEG
 AASB_DEG_positive<-droplevels(AASB_DEG[which(AASB_DEG$Change=="Positive"),])
 tissue_positive<-names(table(AASB_DEG_positive$Tissue))
@@ -327,4 +326,4 @@ for (i in 1:length(cell_negative)){
 Pathway_AASB_DEG<-rbind(pathway_positive_go_data_all,pathway_negative_go_data_all)
 ################### 3.3 Define the final pathway with the cutoff set to qvalue<0.01
 Pathway_AASB_DEG_final<-Pathway_AASB_DEG[which(Pathway_AASB_DEG$qvalue<0.01),]
-write.csv(Pathway_AASB_DEG_final,".../Pathway_AASB_DEG_final.csv")
+write.csv(Pathway_AASB_DEG_final,"/.../Pathway_AASB_DEG_final.csv")
