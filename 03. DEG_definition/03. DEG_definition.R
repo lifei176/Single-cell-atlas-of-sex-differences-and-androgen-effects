@@ -4,16 +4,9 @@
 #################
 #################
 #################
-library(DropletUtils) 
 library(Seurat)
-library(ggsci)
 library(dplyr)
-library(RColorBrewer)
-library(viridis)
-library(ggplot2)
 library(BiocParallel)
-library(harmony) 
-library(DoubletFinder)
 my36colors <- c('#E5D2DD', '#53A85F', '#F1BB72', '#F3B1A0', '#D6E7A3', '#57C3F3', '#476D87',
                 '#E95C59', '#E59CC4', '#AB3282', '#23452F', '#BD956A', '#8C549C', '#585658',
                 '#9FA3A8', '#E0D4CA', '#5F3D69', '#58A4C3', "#b20000",'#E4C755', '#F7F398',
