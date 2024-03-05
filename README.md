@@ -27,13 +27,13 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 - org.Mm.eg.db (version 3.8.2)
 - biomaRt (version 2.40.5)
 # Demo 
-04. AASB-DEG_definition: The pipeline to calculate AASB-DEG.
-Input: required input data files
-Output: expected output results
-The pipeline should take approximately 7 seconds on a recommended computer.
-05. Pathway_enrichment: The pipeline to perform pathway enrichment for calculate DEGs
-Input: required input data files
-Output: expected output results
-The pipeline should take approximately 27 mins on a recommended computer.
-Users can construct input files following the format specified in the Input, and perform calculations using the corresponding code.
+# AASB-DEG_definition: The pipeline to define AASB-DEG
+-Input: required input data files
+-Output: expected output results
+-The pipeline should take approximately 7 seconds on a recommended computer.
+# Pathway_enrichment: The pipeline to perform pathway enrichment based on DEGs
+-Input: required input data files
+-Output: expected output results
+-The pipeline should take approximately 27 mins on a recommended computer
+-Users can also directly provide input files with the format required, and perform analysis by modifying the corresponding code.
 
