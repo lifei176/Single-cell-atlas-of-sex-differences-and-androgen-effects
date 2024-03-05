@@ -28,12 +28,12 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 - biomaRt (version 2.40.5)
 # Demo 
 # AASB-DEG_definition: The pipeline to define AASB-DEG
--Input: required input data files
--Output: expected output results
--The pipeline should take approximately 7 seconds on a recommended computer.
+- Input: required input data files
+- Output: expected output results
+- The pipeline should take approximately 7 seconds on a recommended computer
 # Pathway_enrichment: The pipeline to perform pathway enrichment based on DEGs
--Input: required input data files
--Output: expected output results
--The pipeline should take approximately 27 mins on a recommended computer
--Users can also directly provide input files with the format required, and perform analysis by modifying the corresponding code.
+- Input: required input data files
+- Output: expected output results
+- The pipeline should take approximately 27 mins on a recommended computer
+- Users can also directly provide input files with the format required, and perform analysis by modifying our code
 
