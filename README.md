@@ -8,7 +8,7 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 # Downloading the data
 - The raw data for single-cell RNA-seq has been deposited in GSA (https://ngdc.cncb.ac.cn/gsa/) under CRA006610.
 - The processed data for single-cell RNA-seq has been deposited in OMIX (https://ngdc.cncb.ac.cn/omix/releaseList) under OMIX001083.
-# OS Requirements
+# Operation systems
 - Linux version 3.10.0-957.el7.x86_64
 - Windows 10 64-bit
 # Packages
