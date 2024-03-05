@@ -1,4 +1,4 @@
-# Sex-differences-orchestrated-by-androgens-at-single-cell-resolution
+# This repository contains analysis codes used for the publication: Sex-differences-orchestrated-by-androgens-at-single-cell-resolution
 Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched biological pathways of each cell type across the 17 tissues.
 1. Cellranger_pipeline.sh: The code script in Shell for cellranger pipeline which is executed on Linux system.
 2. Data_processing.R: The code in R to perform QC and construct seurat object for downstream analysis.
@@ -7,8 +7,11 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 5. Pathway_enrichment.R: The code in R to definine the significantly enriched biological pathways based on DEGs and AASB-DEGs respectively (p < 0.01 & q < 0.01).
 # Downloading the data
 - The raw data for single-cell RNA-seq has been deposited in GSA (https://ngdc.cncb.ac.cn/gsa/) under CRA006610.
-- The processed data for single-cell RNA-seq has been deposited in OMIX (https://ngdc.cncb.ac.cn/omix/releaseList) under OMIX001083. 
-# Requirements
+- The processed data for single-cell RNA-seq has been deposited in OMIX (https://ngdc.cncb.ac.cn/omix/releaseList) under OMIX001083.
+# OS Requirements
+- Linux version 3.10.0-957.el7.x86_64
+- Windows 10 64-bit
+# Packages
 - Cell Ranger (version 6.0.2)
 - Seurat (version 4.0.3)
 - DropletUtils (version 1.18.1)
@@ -23,3 +26,14 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 - clusterProfiler (version 3.12.0)
 - org.Mm.eg.db (version 3.8.2)
 - biomaRt (version 2.40.5)
+# Demo 
+- 04. AASB-DEG_definition: The pipeline to calculate AASB-DEG.
+Input: required input data files
+Output: expected output results
+The pipeline should take approximately 7 seconds on a recommended computer.
+- 05. Pathway_enrichment: The pipeline to perform pathway enrichment for calculate DEGs
+Input: required input data files
+Output: expected output results
+The pipeline should take approximately 27 mins on a recommended computer.
+Users can construct input files following the format specified in the Input, and perform calculations using the corresponding code.
+
