@@ -34,6 +34,6 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 # Pathway_enrichment: The pipeline to perform pathway enrichment based on DEGs
 - Input: required input data files
 - Output: expected output results
-- The pipeline should take approximately 27 mins on a recommended computer
+- The pipeline should take approximately 27 minutes on a recommended computer
 - Users can also directly provide input files with the format required, and perform analysis by modifying our code
 
