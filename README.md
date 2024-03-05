@@ -11,6 +11,8 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 # Operation systems
 - Linux version 3.10.0-957.el7.x86_64
 - Windows 10 64-bit
+# Installation Guide
+R packages required for the pipeline can be installed from CRAN (https://cran.r-project.org/) using install.packages(), or from Bioconductor (https://bioconductor.org/) using BiocManager::install(). 
 # Packages
 - Cell Ranger (version 6.0.2)
 - Seurat (version 4.0.3)
