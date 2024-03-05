@@ -37,5 +37,5 @@ R packages required for the pipeline can be installed from CRAN (https://cran.r-
 - Input: required input data files
 - Output: expected output results
 - The pipeline should take approximately 27 minutes on a recommended computer
-- Users can also directly provide input files with the format required, and perform analysis by modifying our code
+- Users can also directly provide their own input files with the format required, and perform analysis by modifying our codes
 
