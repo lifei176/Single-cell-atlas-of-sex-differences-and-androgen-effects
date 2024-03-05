@@ -29,7 +29,7 @@ R packages required for the pipeline can be installed from CRAN (https://cran.r-
 - org.Mm.eg.db (version 3.8.2)
 - biomaRt (version 2.40.5)
 # Demo 
-1. AASB-DEG_definition: The pipeline to define AASB-DEG
+1. AASB-DEG_definition: The pipeline to define AASB-DEGs
 - Input: required input data files
 - Output: expected output results
 - The pipeline should take approximately 7 seconds on a recommended computer
