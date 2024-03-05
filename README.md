@@ -36,6 +36,6 @@ R packages required for the pipeline can be installed from CRAN (https://cran.r-
 2. Pathway_enrichment: The pipeline to perform pathway enrichment analysis of DEGs
 - Input: required input data files
 - Output: expected output results
-- The pipeline should take approximately 3.5 hours to finish all the analyese on a recommended computer
+- The pipeline should take approximately 3.5 hours to finish all the analyses on a recommended computer
 3. Users can also directly provide their own input files with the format required, and perform analysis by modifying our codes
 
