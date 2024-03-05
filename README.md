@@ -29,13 +29,13 @@ R packages required for the pipeline can be installed from CRAN (https://cran.r-
 - org.Mm.eg.db (version 3.8.2)
 - biomaRt (version 2.40.5)
 # Demo 
-AASB-DEG_definition: The pipeline to define AASB-DEG
+1. AASB-DEG_definition: The pipeline to define AASB-DEG
 - Input: required input data files
 - Output: expected output results
 - The pipeline should take approximately 7 seconds on a recommended computer
-Pathway_enrichment: The pipeline to perform pathway enrichment based on DEGs
+2. Pathway_enrichment: The pipeline to perform pathway enrichment based on DEGs
 - Input: required input data files
 - Output: expected output results
 - The pipeline should take approximately 27 minutes on a recommended computer
-- Users can also directly provide their own input files with the format required, and perform analysis by modifying our codes
+3. Users can also directly provide their own input files with the format required, and perform analysis by modifying our codes
 
