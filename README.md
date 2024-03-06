@@ -12,7 +12,7 @@ Codes provided here are to define the DEGs, AASB-DEGs and significantly enriched
 - Linux version 3.10.0-957.el7.x86_64
 - Windows 10 64-bit
 # Hardware requirements
-The pipeline requires only a standard computer with enough RAM to support the operations defined by a user. For optimal performance, we recommended and used a computer with the following specs for testing:
+The pipeline requires only a standard computer with enough RAM to support the operations. For optimal performance, we recommended and used a computer with the following specs for testing:
 AMD Ryzen Threadripper 2950X 16-Core Processor 3.50 GHz and RAM 128 GB.
 # Installation guide
 R packages required for the pipeline can be installed from CRAN (https://cran.r-project.org/) using the install.packages() function, or from Bioconductor (https://bioconductor.org/) using the BiocManager::install() function. The three packages in “05. Pathway_enrichment” should take approximately 11 mins on a recommended computer for installing.
